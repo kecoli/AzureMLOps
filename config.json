@@ -1,0 +1,5 @@
+{
+    "storageUrl": "https://mlads1134816150.blob.core.windows.net/",
+	"blobSecretUrl": "https://mlads2256606654.vault.azure.net/secrets/blobSAS?api-version=7.0"
+}
+
