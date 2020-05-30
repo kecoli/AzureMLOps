@@ -89,7 +89,7 @@ blob_data_ref_1 = DataReference(
 ##  Additional arg to pass 
 ###################################
 Datekey_Param = PipelineParameter(
-                                  name="datekey",
+                                  name="dateKey",
                                   default_value="20191101"
                                   )
 
@@ -97,7 +97,7 @@ Datekey_Param = PipelineParameter(
 ##  Python package configuration 
 ###################################
 
-cd = CondaDependencies.create(pip_packages=['azureml-sdk', 'scikit-learn', 'azureml-dataprep[pandas,fuse]>=1.1.14', 'tensorflow==1.14.0', 'matplotlib','seaborn'])
+cd = CondaDependencies.create(pip_packages=['azureml-sdk', 'scikit-learn', 'azureml-dataprep[pandas,fuse]>=1.1.14', 'tensorflow==1.14.0', 'matplotlib','seaborn','surprise'])
 rc = runconfig.RunConfiguration(conda_dependencies=cd)
 rc.environment.docker.enabled = True
 
@@ -119,7 +119,6 @@ ModelStep = PythonScriptStep(
                                 source_directory='./' + model_name,
                                 allow_reuse=False
                                 )
-
 
 
 transfer_to_adls = DataTransferStep(
