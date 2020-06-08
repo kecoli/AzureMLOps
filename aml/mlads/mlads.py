@@ -54,7 +54,7 @@ print(dateKey)
 data = pd.read_csv(input_path+'/sampleUsage.csv' , sep=',',header=0)
 # [Important] for running this script through ADF, please replace the line above with the line below 
 # (line above reads in the sample data for testing,
-# while the line below read in the data export from Azure Data Explore)
+# while the line below reads in the data export from Azure Data Explore)
 
 # data = pd.read_csv(input_path+'/mlads_1.tsv' , sep='\t',header=0)
 
